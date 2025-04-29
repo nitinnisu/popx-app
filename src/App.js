@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from "./components/profile.jpeg";
+import logo from "./profile.jpeg";
 import './App.css';
 
 
