@@ -1,38 +1,271 @@
-.App {
+.mobile-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 375px; 
+  overflow: hidden;
+  margin: 20px auto; 
+
+}
+
+.welcome-container {
+  padding: 40px;
+}
+
+.welcome-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.welcome-container p {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.welcome-button {
+  background-color: rgb(108, 92, 231);
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
   text-align: center;
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.welcome-button.secondary {
+  background-color: rgb(195, 162, 248); 
+  color: #333;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.account-settings-container {
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.account-settings-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.account-info {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #eee;
+  background-color: #f7f7f7;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-details {
+  flex-grow: 1;
+}
+
+.user-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.user-details p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+
+.verified-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.lorem-ipsum {
+  padding: 20px;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- Create Account Screen Styles --- */
+.create-account-container {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.create-account-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+
+
+.required-asterisk{
+  color: red;
+}
+
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px; 
+}
+
+.form-group label {
+  position: absolute;
+  top: -8px; 
+  left: 10px; 
+  padding: 0 5px; 
+  font-size: 12px; 
+  color: rgb(108, 92, 231);
+  font-weight: 500;
+  border-radius: 3px; 
+  z-index: 3;
+  background-color: white;
+}
+
+.form-group label .required-asterisk {
+  color: red; 
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: calc(100% - 24px);
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(136, 68, 173, 0.3);
+  background-color: #fff;
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="password"]::placeholder {
+  color: #aaa;
+}
+
+
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group label {
+  margin-left: 5px;
+}
+
+
+.create-account-button {
+  background-color: rgb(108, 92, 231);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+}
+
+.create-account-button:hover {
+  background-color: #7a3a95;
+}
+
+/* --- Sign In Screen Styles --- */
+.sign-in-container {
+  padding: 20px;
+}
+
+.sign-in-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sign-in-container p {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sign-in-form .form-group label {
+  display: block;
+  font-size: 14px;
+  color: rgb(108, 92, 231);
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.sign-in-form .form-group input[type="email"],
+.sign-in-form .form-group input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.login-button {
+  background-color: #cccccc; /* Grey */
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+}
+
+.login-button:hover {
+  background-color: #b3b3b3;
 }
